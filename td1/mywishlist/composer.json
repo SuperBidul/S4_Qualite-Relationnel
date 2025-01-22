@@ -6,7 +6,7 @@
 
   "autoload": {
     "psr-4": {
-      "mywishlist\\": "src"
+      "mywishlist\\": "src/"
     }
   }
 }

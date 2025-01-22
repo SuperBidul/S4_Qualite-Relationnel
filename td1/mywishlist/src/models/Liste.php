@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace models;
+namespace mywishlist\models;
 
 class Liste extends \Illuminate\Database\Eloquent\Model
 {
