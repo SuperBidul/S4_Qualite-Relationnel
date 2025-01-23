@@ -32,3 +32,12 @@ if (isset($_GET['id'])){
     {$i->url},
     {$i->tarif}<br>";
 }
+
+$item = new Item();
+$item->liste_id = 1;
+$item->nom = 'nom_item';
+$item->descr = 'descr_item';
+$item->img = 'img_item.jpg';
+$item->url = 'http://localhost/test/td10/xxxx.html';
+$item->tarif = 99.99;
+$item->save();
