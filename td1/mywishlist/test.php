@@ -20,3 +20,15 @@ foreach ($liste as $l) {
     " {$l->expiration}",
     " {$l->token}<br>";
 }
+
+if (isset($_GET['id'])){
+    $i = Item::where('id', '=', $_GET['id'])->first();
+    echo '--------------<br>';
+    echo "{$i->id},
+    {$i->liste_id},
+    {$i->nom},
+    {$i->descr},
+    <img src='img/{$i->img}' height=100 width=100>,
+    {$i->url},
+    {$i->tarif}<br>";
+}
