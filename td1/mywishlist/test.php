@@ -33,11 +33,27 @@ if (isset($_GET['id'])){
     {$i->tarif}<br>";
 }
 
+/* CREER UN NOUVEL ITEM
 $item = new Item();
 $item->liste_id = 1;
-$item->nom = 'nom_item';
-$item->descr = 'descr_item';
-$item->img = 'img_item.jpg';
-$item->url = 'http://localhost/test/td10/xxxx.html';
+$item->nom = 'rose';
+$item->descr = 'une rose rose';
+$item->img = 'rose.jpg';
+$item->url = '';
 $item->tarif = 99.99;
 $item->save();
+*/
+
+echo '--------------<br>';
+
+$items = Item::get();
+foreach ($items as $i) {
+    echo "{$i->id},
+    {$i->liste_id},
+    {$i->liste()->first()->titre},
+    {$i->nom},
+    {$i->descr},
+    <img src='img/{$i->img}' height=100 width=100>,
+    {$i->url},
+    {$i->tarif}<br>";
+}
