@@ -48,9 +48,11 @@ echo '--------------<br>';
 
 $items = Item::get();
 foreach ($items as $i) {
+    $liste = $i->liste()->first();
+    $titre = $liste ? $liste->titre : 'Pas de liste';
     echo "{$i->id},
     {$i->liste_id},
-    {$i->liste()->first()->titre},
+    {$titre},
     {$i->nom},
     {$i->descr},
     <img src='img/{$i->img}' height=100 width=100>,
