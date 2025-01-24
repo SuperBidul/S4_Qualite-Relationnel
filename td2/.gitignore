@@ -1,0 +1,8 @@
+*.iml
+out/
+.idea/
+td2/conf/conf.ini
+td2/src/conf/conf.ini
+td2/src/conf/
+db.conf.ini
+/src/conf/
